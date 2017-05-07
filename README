@@ -1,0 +1,33 @@
+How to build my solution:
+-- Execute make in corresponding directories.
+
+Anything Unusual about my solution that the TA should know.
+-- About the question 3 in one-level paging and two-level paging, it asks as to access memory inside the virtual address space but outside of currently allocated pages.  However, I think it means that we should invoke a segementation fault.  Or, this question will be same as the question 4.
+-- About the fork, one of the the ROP was triggled in semaphore.
+
+Other than apps directories (we modified almost every files in example directories) and Makefile, 
+
+one-level paging v.s. original:
+    one-level/include/os/memory_constants.h
+    one-level/include/os/memory.h
+    one-level/include/os/process.h
+    one-level/os/memory.c
+    one-level/os/process.c
+    one-level/os/traps.c
+
+two-level paging v.s. one-level:
+    two-level/include/os/memory_constants.h
+    two-level/include/os/memory.h
+    two-level/include/os/process.h
+    two-level/os/memory.c
+    two-level/os/process.c
+
+fork v.s. one-level:
+    fork/include/os/memory.h
+    fork/include/os/process.h
+    fork/include/os/traps.h
+    lab3/fork/include/usertraps.h
+    lab3/fork/os/memory.c
+    fork/os/process.c
+    fork/os/traps.c
+    lab3/fork/os/usertraps.s
